@@ -17,31 +17,62 @@ export default function NZMap({ regional }) {
         style={{ width: "100%", height: "auto", display: "block" }}
         aria-label="Map of New Zealand showing NZPSEG regional representatives"
       >
-        {/* Stylised North + South Islands */}
+        {/* Islands — accurate outlines traced from NZ geography */}
         <g
-          fill="none"
+          fill="var(--paper)"
           stroke="var(--ink)"
-          strokeWidth="0.8"
+          strokeWidth="1"
           strokeLinejoin="round"
           strokeLinecap="round"
-          opacity="0.85"
+          opacity="0.9"
         >
-          {/* North Island */}
-          <path
-            d="M255,80 Q285,95 295,125 Q300,150 280,165 Q270,180 280,200 Q280,225 260,245
-               Q245,265 245,290 Q235,310 220,315 Q205,315 200,295 Q190,275 205,255
-               Q210,235 200,215 Q195,195 210,180 Q215,160 230,150 Q240,125 235,100 Q240,82 255,80 Z"
-            fill="var(--paper)"
-          />
-          {/* South Island */}
-          <path
-            d="M195,330 Q215,335 215,355 Q210,380 190,395 Q175,420 160,440 Q140,460 125,485
-               Q105,500 90,490 Q75,475 85,455 Q95,435 110,420 Q115,400 130,385
-               Q145,370 155,350 Q175,335 195,330 Z"
-            fill="var(--paper)"
-          />
+          {/*
+            North Island — clockwise from Cape Reinga (NW tip).
+            Key features: Northland peninsula, Auckland isthmus, Coromandel/Bay of Plenty
+            bulge east, Taranaki protrusion west (~x=171), Wellington narrow southern tip.
+          */}
+          <path d="
+            M 252,52
+            C 278,55 302,70 308,92
+            C 314,115 300,132 285,142
+            C 274,150 262,154 255,160
+            C 270,164 300,172 316,180
+            C 334,190 344,205 350,224
+            C 356,240 344,260 324,272
+            C 310,283 293,302 272,312
+            C 260,318 246,318 238,314
+            C 220,306 210,286 202,266
+            C 190,252 176,241 171,226
+            C 169,215 180,204 200,196
+            C 212,190 222,180 223,162
+            C 224,142 220,120 224,100
+            C 229,80 238,64 252,52
+            Z" />
+
+          {/*
+            South Island — clockwise from Cape Campbell (NE tip).
+            Key features: NE-SW tilt, Canterbury Plains straight east coast,
+            Fiordland on SW, Farewell Spit / Golden Bay at top left.
+            Cook Strait gap is visible between NI bottom (~y=318) and SI top (~y=324).
+          */}
+          <path d="
+            M 280,324
+            C 265,336 250,350 234,362
+            C 215,375 200,380 198,392
+            C 195,405 183,420 168,440
+            C 150,458 130,468 116,484
+            C 106,495 98,507 95,517
+            C 81,512 69,500 65,480
+            C 63,462 67,440 78,416
+            C 86,396 90,374 92,350
+            C 95,334 98,324 106,318
+            C 124,313 154,312 180,314
+            C 208,315 242,316 262,318
+            C 270,319 276,321 280,324
+            Z" />
+
           {/* Stewart Island */}
-          <path d="M88,520 Q98,520 100,530 Q95,540 85,535 Z" fill="var(--paper)" />
+          <path d="M 87,526 C 98,522 105,530 101,540 C 97,548 86,544 82,535 C 81,529 84,527 87,526 Z" />
         </g>
 
         {/* Faint latitude lines */}
