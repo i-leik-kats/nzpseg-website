@@ -9,7 +9,7 @@ function FooterCol({ title, items }) {
           fontSize: 11,
           letterSpacing: "0.1em",
           textTransform: "uppercase",
-          color: "var(--muted-2)",
+          color: "rgba(255,255,255,0.5)",
           marginBottom: 18,
         }}
       >
@@ -23,15 +23,15 @@ function FooterCol({ title, items }) {
               style={{
                 background: "transparent",
                 border: "none",
-                color: "var(--ink)",
+                color: "var(--paper)",
                 cursor: it.onClick ? "pointer" : "default",
                 padding: 0,
                 fontSize: 14,
                 fontFamily: "var(--sans)",
                 textAlign: "left",
               }}
-              onMouseEnter={(e) => { if (it.onClick) e.currentTarget.style.color = "var(--muted)"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.color = "var(--ink)"; }}
+              onMouseEnter={(e) => { if (it.onClick) e.currentTarget.style.opacity = "0.7"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.opacity = "1"; }}
             >
               {it.label}
             </button>
@@ -46,7 +46,7 @@ export default function Footer() {
   const navigate = useNavigate();
 
   return (
-    <footer style={{ background: "var(--paper)", color: "var(--ink)", borderTop: "1px solid var(--rule)", paddingTop: 48, paddingBottom: 36 }}>
+    <footer style={{ background: "var(--ink)", color: "var(--paper)", paddingTop: 48, paddingBottom: 36 }}>
       <div className="container">
         <div
           style={{
@@ -54,7 +54,7 @@ export default function Footer() {
             gridTemplateColumns: "2fr 1fr 1fr 1fr",
             gap: 48,
             paddingTop: 48,
-            borderTop: "1px solid var(--rule)",
+            borderTop: "1px solid rgba(255,255,255,0.18)",
           }}
         >
           {/* Brand blurb */}
@@ -67,16 +67,17 @@ export default function Footer() {
                   width: 32,
                   height: 32,
                   objectFit: "contain",
-                  mixBlendMode: "multiply",
+                  filter: "brightness(1.4) contrast(0.9)",
+                  mixBlendMode: "screen",
                 }}
               />
-              <div style={{ fontFamily: "var(--serif-display)", fontSize: 19, color: "var(--ink)" }}>
+              <div style={{ fontFamily: "var(--serif-display)", fontSize: 19, color: "var(--paper)" }}>
                 NZPSEG
               </div>
             </div>
             <p
               style={{
-                color: "var(--muted)",
+                color: "rgba(255,255,255,0.6)",
                 fontSize: 14,
                 lineHeight: 1.55,
                 maxWidth: 360,
@@ -121,13 +122,13 @@ export default function Footer() {
           style={{
             marginTop: 56,
             paddingTop: 24,
-            borderTop: "1px solid var(--rule)",
+            borderTop: "1px solid rgba(255,255,255,0.12)",
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
             fontFamily: "var(--mono)",
             fontSize: 11,
-            color: "var(--muted-2)",
+            color: "rgba(255,255,255,0.45)",
             letterSpacing: "0.06em",
             textTransform: "uppercase",
           }}
