@@ -14,8 +14,7 @@ export default function CommitteePage() {
             The students who run NZPSEG.
           </h1>
           <p style={{ fontSize: 19, color: "var(--muted)", maxWidth: 620 }}>
-            NZPSEG is led by a national committee of medical students drawn from across New Zealand.
-            Each region has a student representative who acts as the local point of contact.
+            NZPSEG is led by a national committee of medical students drawn from across New Zealand, united by our interest in plastic surgery.
           </p>
         </div>
       </section>
