@@ -1,6 +1,6 @@
 import Section from "../components/Section";
 import NZMap from "../components/NZMap";
-import { committee, regional, advisors } from "../data/committee";
+import { committee, regional } from "../data/committee";
 
 export default function CommitteePage() {
   return (
@@ -110,35 +110,7 @@ export default function CommitteePage() {
         </div>
       </Section>
 
-      {/* ── FACULTY ADVISORS (dark) ── */}
-      <Section dark label="Acknowledgements" title="Faculty advisors">
-        <p
-          style={{
-            color: "rgba(255,255,255,0.75)",
-            maxWidth: 640,
-            fontSize: 17,
-            marginBottom: 40,
-          }}
-        >
-          NZPSEG is supported by an informal advisory group of New Zealand plastic surgery
-          consultants and registrars who give their time to teach and mentor students. We are
-          grateful for their support.
-        </p>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 24 }}>
-          {advisors.map((a, i) => (
-            <div key={i} style={{ paddingTop: 22, borderTop: "1px solid rgba(255,255,255,0.18)" }}>
-              <div
-                style={{ fontFamily: "var(--serif-display)", fontSize: 19, color: "var(--paper)" }}
-              >
-                {a.name}
-              </div>
-              <div style={{ fontSize: 13, color: "rgba(255,255,255,0.55)", marginTop: 4 }}>
-                {a.title}
-              </div>
-            </div>
-          ))}
-        </div>
-      </Section>
+      {/* Faculty advisors section removed — add back when advisors are confirmed */}
     </div>
   );
 }
