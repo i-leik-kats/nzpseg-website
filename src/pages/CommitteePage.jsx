@@ -1,5 +1,5 @@
 import Section from "../components/Section";
-import { committee, regional } from "../data/committee";
+import { committee } from "../data/committee";
 
 export default function CommitteePage() {
   return (
@@ -62,49 +62,8 @@ export default function CommitteePage() {
         </div>
       </Section>
 
-      {/* ── REGIONAL REPS ── */}
-      <Section
-        label="Around the motu"
-        title="Regional representatives"
-        style={{ borderTop: "1px solid var(--rule)" }}
-      >
-        <div style={{ borderTop: "1px solid var(--rule-strong)", maxWidth: 640 }}>
-          {regional.map((r, i) => (
-            <div
-              key={i}
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1fr auto",
-                alignItems: "baseline",
-                padding: "22px 0",
-                borderBottom: "1px solid var(--rule)",
-              }}
-            >
-              <div>
-                <div
-                  style={{ fontFamily: "var(--serif-display)", fontSize: 22, marginBottom: 4 }}
-                >
-                  {r.region}
-                </div>
-                <div style={{ fontSize: 13, color: "var(--muted)" }}>{r.school}</div>
-              </div>
-              <div
-                style={{
-                  fontFamily: "var(--mono)",
-                  fontSize: 12,
-                  color: "var(--muted-2)",
-                  letterSpacing: "0.04em",
-                  textTransform: "uppercase",
-                }}
-              >
-                {r.reps} {r.reps === 1 ? "rep" : "reps"}
-              </div>
-            </div>
-          ))}
-        </div>
-      </Section>
-
       {/* Faculty advisors section removed — add back when advisors are confirmed */}
+      {/* Regional reps section removed — add back when reps are confirmed */}
     </div>
   );
 }
