@@ -46,7 +46,7 @@ export default function Footer() {
   const navigate = useNavigate();
 
   return (
-    <footer style={{ background: "var(--ink)", color: "var(--paper)", paddingTop: 88, paddingBottom: 36 }}>
+    <footer style={{ background: "var(--ink)", color: "var(--paper)", paddingTop: 48, paddingBottom: 36 }}>
       <div className="container">
         <div
           style={{
