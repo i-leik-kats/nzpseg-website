@@ -1,5 +1,4 @@
 import Section from "../components/Section";
-import NZMap from "../components/NZMap";
 import { committee, regional } from "../data/committee";
 
 export default function CommitteePage() {
@@ -63,50 +62,45 @@ export default function CommitteePage() {
         </div>
       </Section>
 
-      {/* ── NZ MAP + REGIONAL REPS ── */}
+      {/* ── REGIONAL REPS ── */}
       <Section
         label="Around the motu"
         title="Regional representatives"
         style={{ borderTop: "1px solid var(--rule)" }}
       >
-        <div style={{ display: "grid", gridTemplateColumns: "1.1fr 1fr", gap: 64, alignItems: "start" }}>
-          <NZMap regional={regional} />
-          <div>
-            <div style={{ borderTop: "1px solid var(--rule-strong)" }}>
-              {regional.map((r, i) => (
+        <div style={{ borderTop: "1px solid var(--rule-strong)", maxWidth: 640 }}>
+          {regional.map((r, i) => (
+            <div
+              key={i}
+              style={{
+                display: "grid",
+                gridTemplateColumns: "1fr auto",
+                alignItems: "baseline",
+                padding: "22px 0",
+                borderBottom: "1px solid var(--rule)",
+              }}
+            >
+              <div>
                 <div
-                  key={i}
-                  style={{
-                    display: "grid",
-                    gridTemplateColumns: "1fr auto",
-                    alignItems: "baseline",
-                    padding: "22px 0",
-                    borderBottom: "1px solid var(--rule)",
-                  }}
+                  style={{ fontFamily: "var(--serif-display)", fontSize: 22, marginBottom: 4 }}
                 >
-                  <div>
-                    <div
-                      style={{ fontFamily: "var(--serif-display)", fontSize: 22, marginBottom: 4 }}
-                    >
-                      {r.region}
-                    </div>
-                    <div style={{ fontSize: 13, color: "var(--muted)" }}>{r.school}</div>
-                  </div>
-                  <div
-                    style={{
-                      fontFamily: "var(--mono)",
-                      fontSize: 12,
-                      color: "var(--muted-2)",
-                      letterSpacing: "0.04em",
-                      textTransform: "uppercase",
-                    }}
-                  >
-                    {r.reps} {r.reps === 1 ? "rep" : "reps"}
-                  </div>
+                  {r.region}
                 </div>
-              ))}
+                <div style={{ fontSize: 13, color: "var(--muted)" }}>{r.school}</div>
+              </div>
+              <div
+                style={{
+                  fontFamily: "var(--mono)",
+                  fontSize: 12,
+                  color: "var(--muted-2)",
+                  letterSpacing: "0.04em",
+                  textTransform: "uppercase",
+                }}
+              >
+                {r.reps} {r.reps === 1 ? "rep" : "reps"}
+              </div>
             </div>
-          </div>
+          ))}
         </div>
       </Section>
 
