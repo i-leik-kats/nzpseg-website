@@ -150,7 +150,6 @@ export default function HomePage() {
       <Section
         label="What we do"
         title="Here's what we do"
-        kicker="We keep our remit narrow on purpose — the value of a student society is in what it does consistently, not what it lists in a brochure."
       >
         <div
           style={{
