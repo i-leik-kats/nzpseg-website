@@ -71,24 +71,6 @@ export default function HomePage() {
             {/* Right — upcoming event aside */}
             <aside style={{ borderLeft: "1px solid var(--rule)", paddingLeft: 36 }}>
               <div
-                className="eyebrow"
-                style={{ marginBottom: 22, color: "var(--accent, var(--navy))" }}
-              >
-                <span
-                  style={{
-                    display: "inline-block",
-                    width: 6,
-                    height: 6,
-                    borderRadius: 999,
-                    background: "var(--accent, var(--navy))",
-                    marginRight: 8,
-                    transform: "translateY(-2px)",
-                    animation: "pulseDot 1.6s ease-in-out infinite",
-                  }}
-                />
-                TONIGHT · JOURNAL CLUB
-              </div>
-              <div
                 style={{
                   fontFamily: "var(--serif-display)",
                   fontSize: 28,
