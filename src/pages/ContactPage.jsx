@@ -31,11 +31,11 @@ export default function ContactPage() {
             Contact
           </div>
           <h1 style={{ maxWidth: "16ch", marginBottom: 28 }}>
-            Get in touch with the committee.
+            Get in touch.
           </h1>
           <p style={{ fontSize: 19, color: "var(--muted)", maxWidth: 620 }}>
             Questions about an event, interested in speaking, or want to be added to the mailing
-            list? Send us a note.
+            list?
           </p>
         </div>
       </section>
