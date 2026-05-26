@@ -1,110 +1,93 @@
-// Stylised NZ SVG map with city dots for each region with representatives.
-// Coordinates in viewBox 0 0 400 560.
+// NZMap — Wikipedia NZ outline (NordNordWest) with city dots at real geographic coordinates.
+//
+// Projection: equirectangular
+//   Bounds (from Wikipedia NZ location map template):
+//     W = 166.0°E, E = 179.0°E, N = -34.0°, S = -47.5°
+//   SVG canvas: 1927.56 × 2432.122
+
+const W = 166.0;
+const E = 179.0;
+const N = -34.0;
+const S = -47.5;
+const SVG_W = 1927.56;
+const SVG_H = 2432.122;
+
+function geoToSvg(lat, lon) {
+  return {
+    x: ((lon - W) / (E - W)) * SVG_W,
+    y: ((lat - N) / (S - N)) * SVG_H,
+  };
+}
 
 export default function NZMap({ regional }) {
   const cities = [
-    { id: "Auckland",     x: 248, y: 158, label: "Auckland"     },
-    { id: "Waikato",      x: 254, y: 198, label: "Waikato"      },
-    { id: "Wellington",   x: 235, y: 290, label: "Wellington"   },
-    { id: "Christchurch", x: 168, y: 380, label: "Christchurch" },
-    { id: "Dunedin",      x: 122, y: 470, label: "Dunedin"      },
+    { id: "Auckland",     lat: -36.87, lon: 174.76, label: "Auckland"     },
+    { id: "Waikato",      lat: -37.79, lon: 175.28, label: "Waikato"      },
+    { id: "Wellington",   lat: -41.29, lon: 174.78, label: "Wellington"   },
+    { id: "Christchurch", lat: -43.53, lon: 172.64, label: "Christchurch" },
+    { id: "Dunedin",      lat: -45.87, lon: 170.50, label: "Dunedin"      },
   ];
+
+  // Sizes are in the 1927×2432 coordinate space; the SVG is scaled down to ~480px wide.
+  const dotR    = 26;   // main dot radius
+  const auraR   = 68;   // outer glow radius
+  const fsCity  = 80;   // city name font size
+  const fsSub   = 52;   // "N REPS" font size
+  const lx      = 52;   // label x-offset from dot centre
 
   return (
     <div style={{ position: "relative", width: "100%", maxWidth: 480 }}>
       <svg
-        viewBox="0 0 400 560"
+        viewBox={`0 0 ${SVG_W} ${SVG_H}`}
         style={{ width: "100%", height: "auto", display: "block" }}
         aria-label="Map of New Zealand showing NZPSEG regional representatives"
       >
-        {/* Islands — accurate outlines traced from NZ geography */}
-        <g
-          fill="var(--paper)"
-          stroke="var(--ink)"
-          strokeWidth="1"
-          strokeLinejoin="round"
-          strokeLinecap="round"
-          opacity="0.9"
-        >
-          {/*
-            North Island — clockwise from Cape Reinga (NW tip).
-            Key features: Northland peninsula, Auckland isthmus, Coromandel/Bay of Plenty
-            bulge east, Taranaki protrusion west (~x=171), Wellington narrow southern tip.
-          */}
-          <path d="
-            M 252,52
-            C 278,55 302,70 308,92
-            C 314,115 300,132 285,142
-            C 274,150 262,154 255,160
-            C 270,164 300,172 316,180
-            C 334,190 344,205 350,224
-            C 356,240 344,260 324,272
-            C 310,283 293,302 272,312
-            C 260,318 246,318 238,314
-            C 220,306 210,286 202,266
-            C 190,252 176,241 171,226
-            C 169,215 180,204 200,196
-            C 212,190 222,180 223,162
-            C 224,142 220,120 224,100
-            C 229,80 238,64 252,52
-            Z" />
-
-          {/*
-            South Island — clockwise from Cape Campbell (NE tip).
-            Key features: NE-SW tilt, Canterbury Plains straight east coast,
-            Fiordland on SW, Farewell Spit / Golden Bay at top left.
-            Cook Strait gap is visible between NI bottom (~y=318) and SI top (~y=324).
-          */}
-          <path d="
-            M 280,324
-            C 265,336 250,350 234,362
-            C 215,375 200,380 198,392
-            C 195,405 183,420 168,440
-            C 150,458 130,468 116,484
-            C 106,495 98,507 95,517
-            C 81,512 69,500 65,480
-            C 63,462 67,440 78,416
-            C 86,396 90,374 92,350
-            C 95,334 98,324 106,318
-            C 124,313 154,312 180,314
-            C 208,315 242,316 262,318
-            C 270,319 276,321 280,324
-            Z" />
-
-          {/* Stewart Island */}
-          <path d="M 87,526 C 98,522 105,530 101,540 C 97,548 86,544 82,535 C 81,529 84,527 87,526 Z" />
-        </g>
+        {/* Base NZ outline from Wikipedia NordNordWest SVG */}
+        <image
+          href="/assets/nz-outline.svg"
+          x="0"
+          y="0"
+          width={SVG_W}
+          height={SVG_H}
+        />
 
         {/* Faint latitude lines */}
-        <g stroke="var(--rule)" strokeWidth="0.4" strokeDasharray="2 4" opacity="0.6">
-          <line x1="0" y1="150" x2="400" y2="150" />
-          <line x1="0" y1="290" x2="400" y2="290" />
-          <line x1="0" y1="430" x2="400" y2="430" />
+        <g stroke="var(--rule)" strokeWidth="3" strokeDasharray="12 24" opacity="0.6">
+          {[-37, -40, -43, -46].map((lat) => {
+            const { y } = geoToSvg(lat, W);
+            return <line key={lat} x1="0" y1={y} x2={SVG_W} y2={y} />;
+          })}
         </g>
 
-        {/* City dots */}
+        {/* City dots + labels */}
         {cities.map((c) => {
-          const r = regional.find((rr) => rr.region === c.id);
-          const reps = r ? r.reps : 0;
+          const { x, y } = geoToSvg(c.lat, c.lon);
+          const reg  = regional.find((rr) => rr.region === c.id);
+          const reps = reg ? reg.reps : 0;
+
           return (
             <g key={c.id}>
-              <circle cx={c.x} cy={c.y} r="10" fill="var(--accent, var(--navy))" opacity="0.12" />
-              <circle cx={c.x} cy={c.y} r="4.5" fill="var(--accent, var(--navy))" />
+              {/* Glow aura */}
+              <circle cx={x} cy={y} r={auraR} fill="var(--accent, var(--navy))" opacity="0.12" />
+              {/* Main dot */}
+              <circle cx={x} cy={y} r={dotR}  fill="var(--accent, var(--navy))" />
+              {/* City name */}
               <text
-                x={c.x + 14}
-                y={c.y - 4}
+                x={x + lx}
+                y={y - 6}
                 fontFamily="var(--serif-display)"
-                fontSize="13"
+                fontSize={fsCity}
                 fill="var(--ink)"
               >
                 {c.label}
               </text>
+              {/* Rep count */}
               <text
-                x={c.x + 14}
-                y={c.y + 11}
+                x={x + lx}
+                y={y + fsSub}
                 fontFamily="var(--mono)"
-                fontSize="9"
-                letterSpacing="1"
+                fontSize={fsSub}
+                letterSpacing="5"
                 fill="var(--muted)"
               >
                 {reps} {reps === 1 ? "REP" : "REPS"}
@@ -113,15 +96,23 @@ export default function NZMap({ regional }) {
           );
         })}
 
-        {/* N compass mark */}
-        <g transform="translate(360, 60)" opacity="0.5">
-          <line x1="0" y1="-14" x2="0" y2="14" stroke="var(--ink)" strokeWidth="0.6" />
-          <polygon points="0,-14 -4,-4 4,-4" fill="var(--ink)" />
-          <text x="0" y="-20" textAnchor="middle" fontFamily="var(--mono)" fontSize="9" fill="var(--muted)">
+        {/* N compass mark (top-right corner) */}
+        <g transform={`translate(${SVG_W - 220}, 180)`} opacity="0.5">
+          <line x1="0" y1="-90" x2="0" y2="90" stroke="var(--ink)" strokeWidth="5" />
+          <polygon points="0,-90 -28,-28 28,-28" fill="var(--ink)" />
+          <text
+            x="0"
+            y="-116"
+            textAnchor="middle"
+            fontFamily="var(--mono)"
+            fontSize="70"
+            fill="var(--muted)"
+          >
             N
           </text>
         </g>
       </svg>
+
       <div
         style={{
           marginTop: 12,
