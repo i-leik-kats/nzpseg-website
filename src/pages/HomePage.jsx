@@ -39,9 +39,6 @@ export default function HomePage() {
           >
             {/* Left — main copy */}
             <div>
-              <div className="eyebrow eyebrow-dot" style={{ marginBottom: 28 }}>
-                Est. Aotearoa · Student-led
-              </div>
               <h1 style={{ marginBottom: 36, maxWidth: "14ch" }}>
                 A community for the future of plastic &amp; reconstructive surgery in Aotearoa.
               </h1>
