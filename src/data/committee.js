@@ -23,6 +23,12 @@ export const committee = [
     photo: null,
   },
   {
+    name: "Michelle Zheng",
+    role: "Communications · 3rd-year medical student",
+    school: "University of Auckland",
+    photo: null,
+  },
+  {
     name: "Jashan Saini",
     role: "Research Coordinator · 3rd-year medical student",
     school: "University of Auckland",
