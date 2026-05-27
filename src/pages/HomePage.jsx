@@ -73,6 +73,9 @@ export default function HomePage() {
 
             {/* Right — upcoming event aside */}
             <aside style={{ borderLeft: "1px solid var(--rule)", paddingLeft: 36 }}>
+              <div className="eyebrow eyebrow-dot" style={{ marginBottom: 18 }}>
+                Upcoming events
+              </div>
               <div
                 style={{
                   fontFamily: "var(--mono)",
