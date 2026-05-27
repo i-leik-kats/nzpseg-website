@@ -1,4 +1,4 @@
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const items = [
   { to: "/",          label: "Home"      },
@@ -8,8 +8,6 @@ const items = [
 ];
 
 export default function Nav() {
-  const navigate = useNavigate();
-
   return (
     <header
       style={{
@@ -25,9 +23,9 @@ export default function Nav() {
       <div
         className="container"
         style={{
-          display: "grid",
-          gridTemplateColumns: "auto 1fr auto",
+          display: "flex",
           alignItems: "center",
+          justifyContent: "space-between",
           gap: 32,
           padding: "18px 32px",
         }}
@@ -68,7 +66,7 @@ export default function Nav() {
         </NavLink>
 
         {/* Nav links */}
-        <nav style={{ display: "flex", gap: 36, justifyContent: "center" }}>
+        <nav style={{ display: "flex", gap: 36, justifyContent: "flex-end" }}>
           {items.map((it) => (
             <NavLink
               key={it.to}
@@ -111,16 +109,6 @@ export default function Nav() {
           ))}
         </nav>
 
-        {/* Right CTA */}
-        <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
-          <button
-            className="btn btn-ghost"
-            onClick={() => navigate("/contact")}
-            style={{ padding: "9px 16px", fontSize: 13 }}
-          >
-            Mailing list
-          </button>
-        </div>
       </div>
     </header>
   );
