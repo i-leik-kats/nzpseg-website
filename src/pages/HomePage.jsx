@@ -12,7 +12,7 @@ const pillars = [
   {
     n: "02",
     t: "National Network",
-    b: "Regional representatives at every NZ medical school, connecting students with mentors, registrars and consultants across the motu.",
+    b: "Regional representatives at every NZ medical school, connecting students with mentors, registrars and consultants.",
   },
   {
     n: "03",
