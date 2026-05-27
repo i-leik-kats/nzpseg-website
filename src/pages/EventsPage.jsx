@@ -17,8 +17,7 @@ export default function EventsPage() {
             What we're running, and what we've run.
           </h1>
           <p style={{ fontSize: 19, color: "var(--muted)", maxWidth: 620 }}>
-            Teaching sessions, careers evenings, and the occasional workshop. All are open to
-            medical students across Aotearoa unless noted.
+            Teaching sessions, careers evenings, workshops, and more.
           </p>
         </div>
       </section>
