@@ -2,26 +2,18 @@ import { sponsors } from "../data/sponsors";
 
 export default function SponsorStrip() {
   return (
-    <section style={{ padding: "72px 0 88px", borderTop: "1px solid var(--rule)" }}>
+    <section className="sponsor-section" style={{ borderTop: "1px solid var(--rule)" }}>
       <div className="container">
         <div className="eyebrow eyebrow-dot" style={{ marginBottom: 36 }}>
           With thanks to our supporters
         </div>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: `repeat(${sponsors.length}, 1fr)`,
-            gap: 0,
-            borderTop: "1px solid var(--rule)",
-            borderBottom: "1px solid var(--rule)",
-          }}
-        >
+        <div className="grid-sponsors">
           {sponsors.map((s, i) => (
             <div
               key={i}
+              className={`sponsor-item${i > 0 ? " sponsor-item--bordered" : ""}`}
               style={{
                 padding: "36px 20px",
-                borderLeft: i === 0 ? "none" : "1px solid var(--rule)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",

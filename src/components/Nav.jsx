@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const items = [
@@ -8,6 +9,8 @@ const items = [
 ];
 
 export default function Nav() {
+  const [open, setOpen] = useState(false);
+
   return (
     <header
       style={{
@@ -21,18 +24,18 @@ export default function Nav() {
       }}
     >
       <div
-        className="container"
+        className="container nav-inner"
         style={{
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
           gap: 32,
-          padding: "18px 32px",
         }}
       >
         {/* Brand */}
         <NavLink
           to="/"
+          onClick={() => setOpen(false)}
           style={{ display: "flex", alignItems: "center", gap: 12, textDecoration: "none" }}
         >
           <img
@@ -65,8 +68,8 @@ export default function Nav() {
           </div>
         </NavLink>
 
-        {/* Nav links */}
-        <nav style={{ display: "flex", gap: 36 }}>
+        {/* Desktop nav links — hidden on mobile via CSS */}
+        <nav className="nav-desktop">
           {items.map((it) => (
             <NavLink
               key={it.to}
@@ -109,7 +112,60 @@ export default function Nav() {
           ))}
         </nav>
 
+        {/* Hamburger button — visible on mobile only via CSS */}
+        <button
+          className="nav-hamburger"
+          onClick={() => setOpen((s) => !s)}
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
+        >
+          <span
+            style={{
+              transform: open ? "translateY(7px) rotate(45deg)" : "none",
+              transition: "transform 220ms ease",
+            }}
+          />
+          <span
+            style={{
+              opacity: open ? 0 : 1,
+              transition: "opacity 220ms ease",
+            }}
+          />
+          <span
+            style={{
+              transform: open ? "translateY(-7px) rotate(-45deg)" : "none",
+              transition: "transform 220ms ease",
+            }}
+          />
+        </button>
       </div>
+
+      {/* Mobile dropdown menu */}
+      {open && (
+        <nav className="nav-mobile-menu">
+          {items.map((it) => (
+            <NavLink
+              key={it.to}
+              to={it.to}
+              end={it.to === "/"}
+              onClick={() => setOpen(false)}
+              style={({ isActive }) => ({
+                display: "block",
+                padding: "14px 20px",
+                fontFamily: "var(--sans)",
+                fontSize: 15,
+                fontWeight: isActive ? 600 : 500,
+                color: isActive ? "var(--ink)" : "var(--muted)",
+                letterSpacing: "0.01em",
+                textDecoration: "none",
+                borderBottom: "1px solid var(--rule)",
+              })}
+            >
+              {it.label}
+            </NavLink>
+          ))}
+        </nav>
+      )}
     </header>
   );
 }

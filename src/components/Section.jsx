@@ -6,10 +6,10 @@ export default function Section({ id, label, title, kicker, children, dark, styl
   return (
     <section
       id={id}
+      className="section-body"
       style={{
         background: dark ? "var(--ink)" : "transparent",
         color: dark ? "var(--paper)" : "inherit",
-        padding: "96px 0",
         borderTop: dark ? "none" : "1px solid var(--rule)",
         ...style,
       }}

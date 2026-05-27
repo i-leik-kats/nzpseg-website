@@ -25,7 +25,7 @@ export default function ContactPage() {
   return (
     <div className="page-enter">
       {/* ── PAGE HEADER ── */}
-      <section style={{ padding: "72px 0 56px" }}>
+      <section className="page-header-section">
         <div className="container">
           <div className="eyebrow eyebrow-dot" style={{ marginBottom: 22 }}>
             Contact
@@ -41,14 +41,7 @@ export default function ContactPage() {
       </section>
 
       <Section style={{ paddingTop: 24 }}>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1.2fr 1fr",
-            gap: 64,
-            alignItems: "start",
-          }}
-        >
+        <div className="grid-contact">
           {/* Contact form */}
           <form
             name="contact"
@@ -113,7 +106,7 @@ export default function ContactPage() {
           </form>
 
           {/* Sidebar */}
-          <aside style={{ borderLeft: "1px solid var(--rule)", paddingLeft: 40 }}>
+          <aside className="contact-aside">
             <div className="eyebrow" style={{ marginBottom: 18 }}>
               Direct
             </div>

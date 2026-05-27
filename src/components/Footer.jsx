@@ -48,15 +48,7 @@ export default function Footer() {
   return (
     <footer style={{ background: "var(--ink)", color: "var(--paper)", paddingTop: 48, paddingBottom: 36 }}>
       <div className="container">
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "2fr 1fr 1fr 1fr",
-            gap: 48,
-            paddingTop: 48,
-            borderTop: "1px solid rgba(255,255,255,0.18)",
-          }}
-        >
+        <div className="grid-footer">
           {/* Brand blurb */}
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 18 }}>
@@ -115,21 +107,7 @@ export default function Footer() {
           />
         </div>
 
-        <div
-          style={{
-            marginTop: 56,
-            paddingTop: 24,
-            borderTop: "1px solid rgba(255,255,255,0.12)",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            fontFamily: "var(--mono)",
-            fontSize: 11,
-            color: "rgba(255,255,255,0.45)",
-            letterSpacing: "0.06em",
-            textTransform: "uppercase",
-          }}
-        >
+        <div className="footer-bottom">
           <div>© {new Date().getFullYear()} NZPSEG</div>
           <div>communications.nzpseg@gmail.com</div>
         </div>

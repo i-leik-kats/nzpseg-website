@@ -8,7 +8,7 @@ export default function EventsPage() {
   return (
     <div className="page-enter">
       {/* ── PAGE HEADER ── */}
-      <section style={{ padding: "72px 0 56px" }}>
+      <section className="page-header-section">
         <div className="container">
           <div className="eyebrow eyebrow-dot" style={{ marginBottom: 22 }}>
             Events &amp; meetings
@@ -28,18 +28,7 @@ export default function EventsPage() {
           <div className="eyebrow" style={{ marginBottom: 22, color: "var(--accent, var(--navy))" }}>
             UPCOMING
           </div>
-          <div
-            style={{
-              border: "1px solid var(--rule-strong)",
-              borderLeft: "3px solid var(--accent, var(--navy))",
-              background: "var(--paper)",
-              display: "grid",
-              gridTemplateColumns: "180px 1fr auto",
-              gap: 32,
-              alignItems: "center",
-              padding: "28px 32px",
-            }}
-          >
+          <div className="grid-event-upcoming">
             {/* Date + time */}
             <div>
               <div
@@ -109,14 +98,7 @@ export default function EventsPage() {
       {/* ── FEATURED EVENT (CAREERS EVENING) ── */}
       <section style={{ paddingBottom: 80 }}>
         <div className="container">
-          <div
-            style={{
-              border: "1px solid var(--rule-strong)",
-              display: "grid",
-              gridTemplateColumns: "1.1fr 1fr",
-              background: "var(--paper)",
-            }}
-          >
+          <div className="grid-event-featured">
             {/* Copy side */}
             <div style={{ padding: "48px 48px 44px" }}>
               <div
@@ -194,16 +176,7 @@ export default function EventsPage() {
           {pastEvents.map((e, i) => (
             <article
               key={i}
-              style={{
-                display: "grid",
-                gridTemplateColumns: "160px 1fr auto",
-                gap: 32,
-                alignItems: "baseline",
-                padding: "28px 0",
-                borderBottom: "1px solid var(--rule)",
-                cursor: "default",
-                transition: "background 160ms ease",
-              }}
+              className="grid-past-event"
               onMouseEnter={(ev) => (ev.currentTarget.style.background = "rgba(20,34,58,0.025)")}
               onMouseLeave={(ev) => (ev.currentTarget.style.background = "transparent")}
             >

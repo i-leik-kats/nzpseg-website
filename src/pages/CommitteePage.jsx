@@ -5,7 +5,7 @@ export default function CommitteePage() {
   return (
     <div className="page-enter">
       {/* ── PAGE HEADER ── */}
-      <section style={{ padding: "72px 0 56px" }}>
+      <section className="page-header-section">
         <div className="container">
           <div className="eyebrow eyebrow-dot" style={{ marginBottom: 22 }}>
             Committee &amp; people
@@ -24,7 +24,7 @@ export default function CommitteePage() {
         label={`National committee — ${new Date().getFullYear()}`}
         style={{ paddingTop: 24, borderTop: "1px solid var(--rule)" }}
       >
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 32 }}>
+        <div className="grid-3col">
           {committee.map((m, i) => (
             <div key={i}>
               {m.photo ? (

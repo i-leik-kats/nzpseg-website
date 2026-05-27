@@ -27,16 +27,9 @@ export default function HomePage() {
   return (
     <div className="page-enter">
       {/* ── HERO ── */}
-      <section style={{ padding: "72px 0 96px", position: "relative", overflow: "hidden" }}>
+      <section className="hero-section" style={{ position: "relative", overflow: "hidden" }}>
         <div className="container">
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1.25fr 1fr",
-              gap: 64,
-              alignItems: "end",
-            }}
-          >
+          <div className="grid-hero">
             {/* Left — main copy */}
             <div>
               <div className="eyebrow eyebrow-dot" style={{ marginBottom: 28 }}>
@@ -72,7 +65,7 @@ export default function HomePage() {
             </div>
 
             {/* Right — upcoming event aside */}
-            <aside style={{ borderLeft: "1px solid var(--rule)", paddingLeft: 36 }}>
+            <aside className="hero-aside">
               <div className="eyebrow eyebrow-dot" style={{ marginBottom: 18 }}>
                 Upcoming events
               </div>
@@ -203,15 +196,7 @@ export default function HomePage() {
         label="What we do"
         title="Here's what we do"
       >
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
-            gap: 1,
-            background: "var(--rule)",
-            border: "1px solid var(--rule)",
-          }}
-        >
+        <div className="grid-pillars">
           {pillars.map((p, i) => (
             <div key={i} style={{ background: "var(--paper)", padding: "40px 32px", minHeight: 240 }}>
               <div className="eyebrow" style={{ marginBottom: 24 }}>
@@ -229,15 +214,7 @@ export default function HomePage() {
 
       {/* ── CTA ── */}
       <Section>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: 64,
-            alignItems: "center",
-            padding: "24px 0",
-          }}
-        >
+        <div className="grid-cta">
           <h2 style={{ maxWidth: 480 }}>Interested in plastic surgery? Come along.</h2>
           <div>
             <p style={{ color: "var(--muted)", marginBottom: 24, fontSize: 17 }}>
