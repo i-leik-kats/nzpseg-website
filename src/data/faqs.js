@@ -20,7 +20,7 @@ export const faqs = [
   },
   {
     q: "I'm a student — how do I get involved?",
-    a: "Each region elects new reps annually — typically in February. Watch the mailing list, or contact us early to express interest.",
+    a: "Get into contact with the committee and we'll find something for you. We always need more helping hands for running events, and you're always more than welcome to present at journal club.",
   },
   {
     q: "Can I present a session?",
