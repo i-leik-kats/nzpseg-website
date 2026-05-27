@@ -14,7 +14,7 @@ export const upcomingEvent = {
   // Hero sidebar fields
   when: "Friday 29 May, 7:30pm",
   format: "Online — link via mailing list",
-  host: "NZPSEG Committee",
+  host: "Jashan Saini — Research Coordinator",
 };
 
 // The featured upcoming event (Careers Evening or similar big event).
