@@ -38,29 +38,6 @@ export const featuredEvent = {
 export const comingUp = "NZPSEG Careers Evening — Semester 2, 2026";
 
 // Past events — newest first
-export const pastEvents = [
-  {
-    date: "2025 · Aug",
-    title: "Hand & Wrist Anatomy Workshop",
-    who: "with Mr A. Singh, Plastic Surgery Registrar",
-    location: "Auckland",
-  },
-  {
-    date: "2025 · May",
-    title: "Burns Management — case-based teaching",
-    who: "Hosted by Middlemore Plastics Department",
-    location: "Online",
-  },
-  {
-    date: "2024 · Nov",
-    title: "Research in Plastic Surgery — a primer",
-    who: "Panel: Dr K. Mahoney, Dr T. Wiremu, Dr J. Park",
-    location: "Wellington",
-  },
-  {
-    date: "2024 · Aug",
-    title: "Careers Evening 2024",
-    who: "Five NZ plastic surgeons on training and life in the speciality",
-    location: "Auckland + livestream",
-  },
-];
+// Add entries here once events have been run, e.g.:
+// { date: "2026 · Jun", title: "Event title", who: "Presenter name", location: "Auckland" }
+export const pastEvents = [];
