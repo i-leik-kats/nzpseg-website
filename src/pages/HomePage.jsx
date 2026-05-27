@@ -131,6 +131,9 @@ export default function HomePage() {
               </div>
 
               {/* Upcoming event */}
+              <div style={{ borderTop: "1px solid var(--rule)", paddingTop: 28, marginBottom: 18 }}>
+                <div className="eyebrow eyebrow-dot">Upcoming events</div>
+              </div>
               <div
                 style={{
                   fontFamily: "var(--mono)",
