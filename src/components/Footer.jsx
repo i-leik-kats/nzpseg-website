@@ -93,8 +93,8 @@ export default function Footer() {
           <FooterCol
             title="Connect"
             items={[
-              { label: "Instagram" },
-              { label: "LinkedIn" },
+              { label: "Instagram", onClick: () => window.open("https://www.instagram.com/nzpseg.uoa/", "_blank") },
+              { label: "Facebook",  onClick: () => window.open("https://www.facebook.com/p/New-Zealand-Plastic-Surgery-Education-Group-61585237265256/", "_blank") },
             ]}
           />
 
