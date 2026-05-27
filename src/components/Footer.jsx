@@ -133,7 +133,7 @@ export default function Footer() {
             textTransform: "uppercase",
           }}
         >
-          <div>© {new Date().getFullYear()} NZPSEG · Aotearoa New Zealand</div>
+          <div>© {new Date().getFullYear()} NZPSEG</div>
           <div>comunnications.nzpseg@gmail.com</div>
         </div>
       </div>
