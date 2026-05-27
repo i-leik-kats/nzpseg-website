@@ -75,6 +75,18 @@ export default function HomePage() {
             <aside style={{ borderLeft: "1px solid var(--rule)", paddingLeft: 36 }}>
               <div
                 style={{
+                  fontFamily: "var(--mono)",
+                  fontSize: 10,
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
+                  color: "var(--muted)",
+                  marginBottom: 10,
+                }}
+              >
+                {upcomingEvent.type}
+              </div>
+              <div
+                style={{
                   fontFamily: "var(--serif-display)",
                   fontSize: 28,
                   lineHeight: 1.18,
