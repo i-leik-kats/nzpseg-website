@@ -43,17 +43,6 @@ export default function SponsorStrip() {
             </div>
           ))}
         </div>
-        <div
-          style={{
-            marginTop: 18,
-            fontFamily: "var(--mono)",
-            fontSize: 11,
-            color: "var(--muted-2)",
-            letterSpacing: "0.06em",
-          }}
-        >
-          Logos to be supplied · placeholder names shown
-        </div>
       </div>
     </section>
   );
