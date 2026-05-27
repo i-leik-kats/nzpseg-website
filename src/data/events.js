@@ -43,14 +43,14 @@ export const pastEvents = [
     date: "2026 · May 12",
     type: "Journal Club",
     title: "Training the Plastic Surgeon: Comparing Australasian and United States Pathways Amid Service Demand",
-    who: "Ella Philp & Isaac Liu, 5th year medical students, University of Auckland",
+    who: "Presented by Ella Philp & Isaac Liu, 5th year medical students, University of Auckland",
     location: "Online",
   },
   {
     date: "2026 · Apr 21",
     type: "Journal Club",
     title: "Regional Osteopenia and Muscle Atrophy in Patients with Brachial Plexus Injury, a cross-sectional study",
-    who: "Jashan Saini, 3rd year medical student, University of Auckland",
+    who: "Presented by Jashan Saini, 3rd year medical student, University of Auckland",
     location: "Online",
   },
 ];
