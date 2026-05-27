@@ -4,7 +4,7 @@
 export const faqs = [
   {
     q: "Who can join NZPSEG events?",
-    a: "Any medical student studying in Aotearoa New Zealand. You don't need to commit to plastic surgery as a career — most of our attendees are exploring.",
+    a: "Anyone interested in plastic surgery!",
   },
   {
     q: "Do you charge for membership?",
@@ -12,7 +12,7 @@ export const faqs = [
   },
   {
     q: "I'm a registrar / consultant — how can I help?",
-    a: "We're always looking for speakers, teaching session leads, and mentors. Get in touch via the form on this page.",
+    a: "We're always on the lookout for interested surgeons. Your input is what makes this initiative possible. Please do get in touch through the form on this page or through our email (communications.nzpseg@gmail.com) and we will get you involved!",
   },
   {
     q: "Are events accessible from outside the main centres?",
