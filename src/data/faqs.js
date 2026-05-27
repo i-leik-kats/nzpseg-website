@@ -19,7 +19,7 @@ export const faqs = [
     a: "We livestream most events so students from any of the four NZ clinical campuses can attend. Recordings are available on request.",
   },
   {
-    q: "How do I become a regional representative?",
+    q: "I'm a student — how do I get involved?",
     a: "Each region elects new reps annually — typically in February. Watch the mailing list, or contact us early to express interest.",
   },
   {
