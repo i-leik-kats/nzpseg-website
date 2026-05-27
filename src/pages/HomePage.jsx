@@ -130,6 +130,10 @@ export default function HomePage() {
                 ))}
               </div>
 
+              <p style={{ fontSize: 13.5, color: "var(--muted)", marginBottom: 40, lineHeight: 1.5 }}>
+                Keep in the loop for upcoming events and opportunities.
+              </p>
+
               {/* Upcoming event */}
               <div style={{ borderTop: "1px solid var(--rule)", paddingTop: 28, marginBottom: 18 }}>
                 <div className="eyebrow eyebrow-dot">Upcoming events</div>
