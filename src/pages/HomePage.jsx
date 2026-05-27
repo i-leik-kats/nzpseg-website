@@ -17,7 +17,7 @@ const pillars = [
   {
     n: "03",
     t: "Education",
-    b: "Bi-weekly journal clubs and teaching sessions led by registrars and consultants — recent literature, anatomy refreshers, and case-based learning.",
+    b: "Bi-weekly journal clubs, careers evenings, and workshops.",
   },
 ];
 
