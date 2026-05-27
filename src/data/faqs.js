@@ -23,7 +23,7 @@ export const faqs = [
     a: "Get into contact with the committee and we'll find something for you. We always need more helping hands for running events, and you're always more than welcome to present at journal club.",
   },
   {
-    q: "Can I present a session?",
-    a: "Yes. Email the committee with the topic, why it matters, and any speakers you'd suggest. We schedule the programme each semester.",
+    q: "Can I present at Journal Club?",
+    a: "Yes. Get into contact with the committee, and we'll put you on the roster.",
   },
 ];
