@@ -51,17 +51,6 @@ export default function HomePage() {
                 registrars, fellows and consultants through teaching evenings, bi-weekly journal
                 clubs, careers nights, and a national peer network.
               </p>
-              <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
-                <button
-                  className="btn btn-primary btn-arrow"
-                  onClick={() => navigate("/events")}
-                >
-                  Upcoming events
-                </button>
-                <button className="btn btn-ghost" onClick={() => navigate("/contact")}>
-                  Get in touch
-                </button>
-              </div>
             </div>
 
             {/* Right — upcoming event aside */}
