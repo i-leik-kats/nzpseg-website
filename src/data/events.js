@@ -7,7 +7,7 @@ export const upcomingEvent = {
   dayLabel: "Fri · 29 May 2026",
   time: "7:30",
   timeSuffix: "pm",
-  type: "Journal Club · Fortnightly",
+  type: "Journal Club",
   title: "Spare-part reconstruction in sarcoma surgery",
   description:
     "Presented by a member of the NZPSEG committee · open to all medical students. Online — link shared with the mailing list.",
@@ -20,7 +20,7 @@ export const upcomingEvent = {
 // The featured upcoming event (Careers Evening or similar big event).
 // Set dateAnnounced to false if the date isn't confirmed yet.
 export const featuredEvent = {
-  eyebrow: "Featured · Upcoming",
+  eyebrow: "Careers",
   title: "NZPSEG Careers Evening",
   description:
     "An evening with plastic surgeons working across New Zealand. Pathways onto the training programme, the realities of the speciality, electives, research, and a long Q&A. Open to all medical students.",
