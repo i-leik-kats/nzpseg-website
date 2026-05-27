@@ -103,8 +103,8 @@ export default function Footer() {
             items={[
               { label: "Email committee", onClick: () => navigate("/contact") },
               { label: "Mailing list",    onClick: () => navigate("/contact") },
-              { label: "Instagram", onClick: () => window.open("https://www.instagram.com/nzpseg.uoa/", "_blank") },
-              { label: "Facebook", onClick: () => window.open("https://www.facebook.com/profile.php?id=61585237265256", "_blank") },
+              { label: "Instagram" },
+              { label: "LinkedIn" },
             ]}
           />
 
