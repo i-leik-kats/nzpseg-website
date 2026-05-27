@@ -35,7 +35,7 @@ export default function HomePage() {
               display: "grid",
               gridTemplateColumns: "1.25fr 1fr",
               gap: 64,
-              alignItems: "start",
+              alignItems: "stretch",
             }}
           >
             {/* Left — main copy */}
@@ -73,7 +73,7 @@ export default function HomePage() {
             </div>
 
             {/* Right — socials + upcoming event aside */}
-            <aside style={{ borderLeft: "1px solid var(--rule)", paddingLeft: 36 }}>
+            <aside style={{ borderLeft: "1px solid var(--rule)", paddingLeft: 36, display: "flex", flexDirection: "column" }}>
 
               {/* Find us online */}
               <div className="eyebrow" style={{ marginBottom: 14 }}>Find us online</div>
@@ -197,7 +197,7 @@ export default function HomePage() {
 
               <div
                 style={{
-                  marginTop: 32,
+                  marginTop: "auto",
                   paddingTop: 22,
                   borderTop: "1px solid var(--rule)",
                   fontSize: 13,
