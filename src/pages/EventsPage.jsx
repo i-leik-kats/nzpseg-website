@@ -197,7 +197,7 @@ export default function EventsPage() {
       </section>
 
       {/* ── PAST EVENTS ── */}
-      <Section label="Archive" title="Past events" style={{ paddingTop: 0 }}>
+      <Section label="Archive" title="Past events" style={{ paddingTop: 0, borderTop: "none" }}>
         <div>
           {pastEvents.map((e, i) => (
             <article
