@@ -7,7 +7,7 @@ const pillars = [
   {
     n: "01",
     t: "Careers Advice",
-    b: "Honest conversations about getting onto the training programme — electives, research opportunities, and what life as a plastics trainee actually looks like.",
+    b: "Honest conversations about getting onto the training programme — research, clinical experience, and what life in plastics actually looks like.",
   },
   {
     n: "02",
