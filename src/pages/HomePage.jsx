@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import Section from "../components/Section";
 import SponsorStrip from "../components/SponsorStrip";
-import { upcomingEvent, featuredEvent, comingUp } from "../data/events";
+import { upcomingEvent, featuredEvent } from "../data/events";
 
 const pillars = [
   {
@@ -190,29 +190,6 @@ export default function HomePage() {
                 </button>
               </div>
 
-              <div
-                style={{
-                  marginTop: 32,
-                  paddingTop: 22,
-                  borderTop: "1px solid var(--rule)",
-                  fontSize: 13,
-                  color: "var(--muted)",
-                }}
-              >
-                <span
-                  style={{
-                    color: "var(--muted-2)",
-                    fontFamily: "var(--mono)",
-                    fontSize: 11,
-                    letterSpacing: "0.08em",
-                    textTransform: "uppercase",
-                    marginRight: 8,
-                  }}
-                >
-                  Coming up
-                </span>
-                {comingUp}
-              </div>
             </aside>
           </div>
         </div>
