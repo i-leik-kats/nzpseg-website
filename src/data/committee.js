@@ -5,19 +5,19 @@
 
 export const committee = [
   {
-    name: "Committee Chair",
-    role: "Chair · Final-year medical student",
+    name: "Ella Philp",
+    role: "Chair · 5th-year medical student",
     school: "University of Auckland",
-    photo: null, // e.g. "/assets/committee/chair.jpg"
+    photo: null, // e.g. "/assets/committee/ella.jpg"
   },
   {
-    name: "Vice Chair",
-    role: "Vice Chair · Final-year medical student",
-    school: "University of Otago",
+    name: "Isaac Liu",
+    role: "Vice Chair · 5th-year medical student",
+    school: "University of Auckland",
     photo: null,
   },
   {
-    name: "Secretary",
+    name: "Carina Zeeck",
     role: "Secretary · 5th-year medical student",
     school: "University of Auckland",
     photo: null,
