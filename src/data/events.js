@@ -10,10 +10,10 @@ export const upcomingEvent = {
   type: "Journal Club",
   title: "Spare-part reconstruction in sarcoma surgery",
   description:
-    "Presented by a member of the NZPSEG committee · open to all medical students. Online — link shared with the mailing list.",
+    "Presented by Kryan Fawkner, third year medical student",
   // Hero sidebar fields
   when: "Friday 29 May, 7:30pm",
-  format: "Online — link via mailing list",
+  format: "Online",
   host: "Jashan Saini — Research Coordinator",
 };
 
@@ -25,10 +25,8 @@ export const featuredEvent = {
   description:
     "An evening with plastic surgeons working across New Zealand. Pathways onto the training programme, the realities of the speciality, electives, research, and a long Q&A. Open to all medical students.",
   details: {
-    DATE: "To be announced — Semester 2, 2026",
-    VENUE: "Auckland — University of Auckland (TBC)",
-    LIVESTREAM: "Yes — for Otago, Wellington & Christchurch",
-    RSVP: "Opens 8 weeks prior",
+    DATE: "Thursday 23 July, 6:30–8pm",
+    VENUE: "University of Auckland, Grafton Campus",
   },
   // Optional image (place in public/assets/ and set path here)
   image: null, // e.g. "/assets/careers-evening-2026.jpg"

@@ -152,12 +152,15 @@ export default function HomePage() {
                     fontFamily: "var(--serif-display)",
                     fontSize: 20,
                     lineHeight: 1.2,
-                    marginBottom: 14,
+                    marginBottom: 10,
                     letterSpacing: "-0.01em",
                   }}
                 >
                   {featuredEvent.title}
                 </div>
+                <p style={{ color: "var(--muted)", marginBottom: 14, fontSize: 14.5 }}>
+                  {featuredEvent.description}
+                </p>
                 <div
                   style={{
                     display: "grid",

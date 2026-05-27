@@ -131,22 +131,7 @@ export default function ContactPage() {
                 >
                   Email
                 </div>
-                <div>comunnications.nzpseg@gmail.com</div>
-              </div>
-              <div>
-                <div
-                  style={{
-                    color: "var(--muted-2)",
-                    fontFamily: "var(--mono)",
-                    fontSize: 11,
-                    letterSpacing: "0.08em",
-                    textTransform: "uppercase",
-                    marginBottom: 4,
-                  }}
-                >
-                  Mailing list
-                </div>
-                <div>Send us your name + medical school and we'll add you on.</div>
+                <div>communications.nzpseg@gmail.com</div>
               </div>
               <div>
                 <div

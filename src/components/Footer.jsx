@@ -101,8 +101,6 @@ export default function Footer() {
           <FooterCol
             title="Connect"
             items={[
-              { label: "Email committee", onClick: () => navigate("/contact") },
-              { label: "Mailing list",    onClick: () => navigate("/contact") },
               { label: "Instagram" },
               { label: "LinkedIn" },
             ]}
@@ -111,7 +109,6 @@ export default function Footer() {
           <FooterCol
             title="Legal"
             items={[
-              { label: "Code of conduct" },
               { label: "Privacy" },
               { label: "Acknowledgements" },
             ]}
@@ -134,7 +131,7 @@ export default function Footer() {
           }}
         >
           <div>© {new Date().getFullYear()} NZPSEG</div>
-          <div>comunnications.nzpseg@gmail.com</div>
+          <div>communications.nzpseg@gmail.com</div>
         </div>
       </div>
     </footer>

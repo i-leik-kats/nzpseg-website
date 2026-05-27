@@ -26,7 +26,7 @@ export default function EventsPage() {
       <section style={{ paddingBottom: 32 }}>
         <div className="container">
           <div className="eyebrow" style={{ marginBottom: 22, color: "var(--accent, var(--navy))" }}>
-            UPCOMING · THIS FORTNIGHT
+            UPCOMING
           </div>
           <div
             style={{
@@ -98,13 +98,6 @@ export default function EventsPage() {
 
             {/* Actions */}
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-              <button
-                className="btn btn-primary btn-arrow"
-                onClick={() => navigate("/contact")}
-                style={{ padding: "10px 18px", fontSize: 13 }}
-              >
-                Join mailing list
-              </button>
               <button className="btn btn-ghost" style={{ padding: "10px 18px", fontSize: 13 }}>
                 Add to calendar
               </button>
