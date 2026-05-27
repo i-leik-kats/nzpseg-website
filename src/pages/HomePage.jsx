@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import Section from "../components/Section";
 import SponsorStrip from "../components/SponsorStrip";
-import { upcomingEvent, comingUp } from "../data/events";
+import { upcomingEvent, featuredEvent, comingUp } from "../data/events";
 
 const pillars = [
   {
@@ -132,6 +132,63 @@ export default function HomePage() {
               >
                 Event details
               </button>
+
+              {/* Careers Evening */}
+              <div style={{ marginTop: 32, paddingTop: 28, borderTop: "1px solid var(--rule)" }}>
+                <div
+                  style={{
+                    fontFamily: "var(--mono)",
+                    fontSize: 10,
+                    letterSpacing: "0.12em",
+                    textTransform: "uppercase",
+                    color: "var(--muted)",
+                    marginBottom: 8,
+                  }}
+                >
+                  {featuredEvent.eyebrow}
+                </div>
+                <div
+                  style={{
+                    fontFamily: "var(--serif-display)",
+                    fontSize: 20,
+                    lineHeight: 1.2,
+                    marginBottom: 14,
+                    letterSpacing: "-0.01em",
+                  }}
+                >
+                  {featuredEvent.title}
+                </div>
+                <div
+                  style={{
+                    display: "grid",
+                    gridTemplateColumns: "auto 1fr",
+                    rowGap: 8,
+                    columnGap: 18,
+                    fontSize: 13,
+                    fontFamily: "var(--mono)",
+                  }}
+                >
+                  {Object.entries(featuredEvent.details).map(([k, v]) => (
+                    <>
+                      <span key={k + "-k"} style={{ color: "var(--muted-2)" }}>{k}</span>
+                      <span key={k + "-v"}>{v}</span>
+                    </>
+                  ))}
+                </div>
+                <button
+                  className="btn btn-ghost btn-arrow"
+                  onClick={() => navigate("/events")}
+                  style={{
+                    marginTop: 18,
+                    padding: "10px 0",
+                    border: "none",
+                    borderBottom: "1px solid var(--ink)",
+                    borderRadius: 0,
+                  }}
+                >
+                  Event details
+                </button>
+              </div>
 
               <div
                 style={{
