@@ -226,6 +226,20 @@ export default function EventsPage() {
                 {e.date}
               </div>
               <div>
+                {e.type && (
+                  <div
+                    style={{
+                      fontFamily: "var(--mono)",
+                      fontSize: 10,
+                      letterSpacing: "0.12em",
+                      textTransform: "uppercase",
+                      color: "var(--muted)",
+                      marginBottom: 6,
+                    }}
+                  >
+                    {e.type}
+                  </div>
+                )}
                 <div
                   style={{
                     fontFamily: "var(--serif-display)",

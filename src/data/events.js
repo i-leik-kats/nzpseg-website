@@ -41,13 +41,15 @@ export const comingUp = "NZPSEG Careers Evening — Semester 2, 2026";
 export const pastEvents = [
   {
     date: "2026 · May 12",
-    title: "Journal Club — Training the Plastic Surgeon: Comparing Australasian and United States Pathways Amid Service Demand",
+    type: "Journal Club",
+    title: "Training the Plastic Surgeon: Comparing Australasian and United States Pathways Amid Service Demand",
     who: "Ella Philp & Isaac Liu, 5th year medical students, University of Auckland",
     location: "Online",
   },
   {
     date: "2026 · Apr 21",
-    title: "Journal Club — Regional Osteopenia and Muscle Atrophy in Patients with Brachial Plexus Injury, a cross-sectional study",
+    type: "Journal Club",
+    title: "Regional Osteopenia and Muscle Atrophy in Patients with Brachial Plexus Injury, a cross-sectional study",
     who: "Jashan Saini, 3rd year medical student, University of Auckland",
     location: "Online",
   },
