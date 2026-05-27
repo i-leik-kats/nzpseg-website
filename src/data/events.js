@@ -4,7 +4,7 @@
 
 // The next / upcoming journal club shown on the home page hero and events page.
 export const upcomingEvent = {
-  dayLabel: "Fri · 27 May 2026",
+  dayLabel: "Fri · 29 May 2026",
   time: "7:30",
   timeSuffix: "pm",
   type: "Journal Club · Fortnightly",
@@ -12,7 +12,7 @@ export const upcomingEvent = {
   description:
     "Presented by a member of the NZPSEG committee · open to all medical students. Online — link shared with the mailing list.",
   // Hero sidebar fields
-  when: "Friday 27 May, 7:30pm",
+  when: "Friday 29 May, 7:30pm",
   format: "Online — link via mailing list",
   host: "NZPSEG Committee",
 };
