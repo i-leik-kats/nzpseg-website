@@ -3,19 +3,8 @@
 // After editing, commit and push to GitHub — Netlify will auto-deploy.
 
 // The next / upcoming journal club shown on the home page hero and events page.
-export const upcomingEvent = {
-  dayLabel: "Fri · 29 May 2026",
-  time: "7:30",
-  timeSuffix: "pm",
-  type: "Journal Club",
-  title: "Spare-part reconstruction in sarcoma surgery",
-  description:
-    "Presented by Kryan Fawkner, third year medical student",
-  // Hero sidebar fields
-  when: "Friday 29 May, 7:30pm",
-  format: "Online",
-  host: "Jashan Saini — Research Coordinator",
-};
+// Set to null when there is no upcoming journal club to display.
+export const upcomingEvent = null;
 
 // The featured upcoming event (Careers Evening or similar big event).
 // Set dateAnnounced to false if the date isn't confirmed yet.
@@ -37,6 +26,13 @@ export const comingUp = "NZPSEG Careers Evening — Semester 2, 2026";
 
 // Past events — newest first
 export const pastEvents = [
+  {
+    date: "2026 · May 29",
+    type: "Journal Club",
+    title: "Spare-part reconstruction in sarcoma surgery",
+    who: "Presented by Kryan Fawkner, 3rd year medical student",
+    location: "Online",
+  },
   {
     date: "2026 · May 12",
     type: "Journal Club",

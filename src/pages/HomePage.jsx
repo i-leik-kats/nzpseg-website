@@ -58,62 +58,66 @@ export default function HomePage() {
               <div className="eyebrow eyebrow-dot" style={{ marginBottom: 18 }}>
                 Upcoming events
               </div>
-              <div
-                style={{
-                  fontFamily: "var(--mono)",
-                  fontSize: 10,
-                  letterSpacing: "0.12em",
-                  textTransform: "uppercase",
-                  color: "var(--muted)",
-                  marginBottom: 10,
-                }}
-              >
-                {upcomingEvent.type}
-              </div>
-              <div
-                style={{
-                  fontFamily: "var(--serif-display)",
-                  fontSize: 28,
-                  lineHeight: 1.18,
-                  marginBottom: 16,
-                  letterSpacing: "-0.01em",
-                }}
-              >
-                {upcomingEvent.title}
-              </div>
-              <p style={{ color: "var(--muted)", marginBottom: 22, fontSize: 14.5 }}>
-                {upcomingEvent.description}
-              </p>
-              <div
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "auto 1fr",
-                  rowGap: 10,
-                  columnGap: 18,
-                  fontSize: 13,
-                  fontFamily: "var(--mono)",
-                }}
-              >
-                <span style={{ color: "var(--muted-2)" }}>WHEN</span>
-                <span>{upcomingEvent.when}</span>
-                <span style={{ color: "var(--muted-2)" }}>FORMAT</span>
-                <span>{upcomingEvent.format}</span>
-                <span style={{ color: "var(--muted-2)" }}>HOST</span>
-                <span>{upcomingEvent.host}</span>
-              </div>
-              <button
-                className="btn btn-ghost btn-arrow"
-                onClick={() => navigate("/events")}
-                style={{
-                  marginTop: 24,
-                  padding: "10px 0",
-                  border: "none",
-                  borderBottom: "1px solid var(--ink)",
-                  borderRadius: 0,
-                }}
-              >
-                Event details
-              </button>
+              {upcomingEvent && (
+                <>
+                  <div
+                    style={{
+                      fontFamily: "var(--mono)",
+                      fontSize: 10,
+                      letterSpacing: "0.12em",
+                      textTransform: "uppercase",
+                      color: "var(--muted)",
+                      marginBottom: 10,
+                    }}
+                  >
+                    {upcomingEvent.type}
+                  </div>
+                  <div
+                    style={{
+                      fontFamily: "var(--serif-display)",
+                      fontSize: 28,
+                      lineHeight: 1.18,
+                      marginBottom: 16,
+                      letterSpacing: "-0.01em",
+                    }}
+                  >
+                    {upcomingEvent.title}
+                  </div>
+                  <p style={{ color: "var(--muted)", marginBottom: 22, fontSize: 14.5 }}>
+                    {upcomingEvent.description}
+                  </p>
+                  <div
+                    style={{
+                      display: "grid",
+                      gridTemplateColumns: "auto 1fr",
+                      rowGap: 10,
+                      columnGap: 18,
+                      fontSize: 13,
+                      fontFamily: "var(--mono)",
+                    }}
+                  >
+                    <span style={{ color: "var(--muted-2)" }}>WHEN</span>
+                    <span>{upcomingEvent.when}</span>
+                    <span style={{ color: "var(--muted-2)" }}>FORMAT</span>
+                    <span>{upcomingEvent.format}</span>
+                    <span style={{ color: "var(--muted-2)" }}>HOST</span>
+                    <span>{upcomingEvent.host}</span>
+                  </div>
+                  <button
+                    className="btn btn-ghost btn-arrow"
+                    onClick={() => navigate("/events")}
+                    style={{
+                      marginTop: 24,
+                      padding: "10px 0",
+                      border: "none",
+                      borderBottom: "1px solid var(--ink)",
+                      borderRadius: 0,
+                    }}
+                  >
+                    Event details
+                  </button>
+                </>
+              )}
 
               {/* Careers Evening */}
               <div style={{ marginTop: 32, paddingTop: 28, borderTop: "1px solid var(--rule)" }}>

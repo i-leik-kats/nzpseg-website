@@ -23,77 +23,79 @@ export default function EventsPage() {
       </section>
 
       {/* ── UPCOMING JOURNAL CLUB ── */}
-      <section style={{ paddingBottom: 32 }}>
-        <div className="container">
-          <div className="eyebrow" style={{ marginBottom: 22, color: "var(--accent, var(--navy))" }}>
-            UPCOMING
-          </div>
-          <div className="grid-event-upcoming">
-            {/* Date + time */}
-            <div>
-              <div
-                style={{
-                  fontFamily: "var(--mono)",
-                  fontSize: 11,
-                  color: "var(--muted-2)",
-                  letterSpacing: "0.08em",
-                  textTransform: "uppercase",
-                  marginBottom: 6,
-                }}
-              >
-                {upcomingEvent.dayLabel}
-              </div>
-              <div
-                style={{
-                  fontFamily: "var(--serif-display)",
-                  fontSize: 28,
-                  lineHeight: 1,
-                  letterSpacing: "-0.01em",
-                }}
-              >
-                {upcomingEvent.time}
-                <span style={{ fontSize: 16, color: "var(--muted)" }}>{upcomingEvent.timeSuffix}</span>
-              </div>
+      {upcomingEvent && (
+        <section style={{ paddingBottom: 32 }}>
+          <div className="container">
+            <div className="eyebrow" style={{ marginBottom: 22, color: "var(--accent, var(--navy))" }}>
+              UPCOMING
             </div>
+            <div className="grid-event-upcoming">
+              {/* Date + time */}
+              <div>
+                <div
+                  style={{
+                    fontFamily: "var(--mono)",
+                    fontSize: 11,
+                    color: "var(--muted-2)",
+                    letterSpacing: "0.08em",
+                    textTransform: "uppercase",
+                    marginBottom: 6,
+                  }}
+                >
+                  {upcomingEvent.dayLabel}
+                </div>
+                <div
+                  style={{
+                    fontFamily: "var(--serif-display)",
+                    fontSize: 28,
+                    lineHeight: 1,
+                    letterSpacing: "-0.01em",
+                  }}
+                >
+                  {upcomingEvent.time}
+                  <span style={{ fontSize: 16, color: "var(--muted)" }}>{upcomingEvent.timeSuffix}</span>
+                </div>
+              </div>
 
-            {/* Details */}
-            <div>
-              <div
-                style={{
-                  fontFamily: "var(--mono)",
-                  fontSize: 10,
-                  letterSpacing: "0.12em",
-                  textTransform: "uppercase",
-                  color: "var(--muted)",
-                  marginBottom: 6,
-                }}
-              >
-                {upcomingEvent.type}
+              {/* Details */}
+              <div>
+                <div
+                  style={{
+                    fontFamily: "var(--mono)",
+                    fontSize: 10,
+                    letterSpacing: "0.12em",
+                    textTransform: "uppercase",
+                    color: "var(--muted)",
+                    marginBottom: 6,
+                  }}
+                >
+                  {upcomingEvent.type}
+                </div>
+                <div
+                  style={{
+                    fontFamily: "var(--serif-display)",
+                    fontSize: 26,
+                    lineHeight: 1.2,
+                    marginBottom: 6,
+                  }}
+                >
+                  {upcomingEvent.title}
+                </div>
+                <div style={{ color: "var(--muted)", fontSize: 14 }}>
+                  {upcomingEvent.description}
+                </div>
               </div>
-              <div
-                style={{
-                  fontFamily: "var(--serif-display)",
-                  fontSize: 26,
-                  lineHeight: 1.2,
-                  marginBottom: 6,
-                }}
-              >
-                {upcomingEvent.title}
-              </div>
-              <div style={{ color: "var(--muted)", fontSize: 14 }}>
-                {upcomingEvent.description}
-              </div>
-            </div>
 
-            {/* Actions */}
-            <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-              <button className="btn btn-ghost" style={{ padding: "10px 18px", fontSize: 13 }}>
-                Add to calendar
-              </button>
+              {/* Actions */}
+              <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+                <button className="btn btn-ghost" style={{ padding: "10px 18px", fontSize: 13 }}>
+                  Add to calendar
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* ── FEATURED EVENT (CAREERS EVENING) ── */}
       <section style={{ paddingBottom: 80 }}>
