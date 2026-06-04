@@ -20,7 +20,7 @@ export const committee = [
     name: "Carina Zeeck",
     role: "Secretary · 5th-year medical student",
     school: "University of Auckland",
-    photo: null,
+    photo: "/assets/committee/carina.png",
   },
   {
     name: "Michelle Zheng",
@@ -38,13 +38,13 @@ export const committee = [
     name: "Angus Hunter",
     role: "Sponsorships · 3rd-year medical student",
     school: "University of Auckland",
-    photo: null,
+    photo: "/assets/committee/angus.jpg",
   },
   {
     name: "Omar Ayoub",
     role: "Site Coordinator · Auckland City Hospital",
     school: "University of Auckland",
-    photo: null,
+    photo: "/assets/committee/omar.jpg",
   },
   {
     name: "Erik Geng",
@@ -56,7 +56,7 @@ export const committee = [
     name: "Brennan Baum",
     role: "Site Coordinator · Middlemore Hospital",
     school: "University of Auckland",
-    photo: null,
+    photo: "/assets/committee/brennan.jpg",
   },
 ];
 
