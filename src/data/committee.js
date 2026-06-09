@@ -8,7 +8,7 @@ export const committee = [
     name: "Ella Philp",
     role: "Chair · 5th-year medical student",
     school: "University of Auckland",
-    photo: null, // e.g. "/assets/committee/ella.jpg"
+    photo: "/assets/committee/ella.jpg",
   },
   {
     name: "Isaac Liu",
